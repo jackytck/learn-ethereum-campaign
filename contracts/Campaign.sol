@@ -28,4 +28,18 @@ contract Campaign {
 
         approvers.push(msg.sender);
     }
+
+    function createRequest(string description, uint value, address recipient) public restricted {
+        // the 'Request' is of memory type,
+        // but 'newRequest' by deafult is storage type,
+        // so need to explicily mark it as memory
+        Request memory newRequest = Request({
+            description: description,
+            value: value,
+            recipient: recipient,
+            complete: false
+        });
+
+        requests.push(newRequest);
+    }
 }
