@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "compile": "node ethereum/compile.js",
+    "deploy": "node ethereum/deploy.js",
     "test": "mocha"
   },
   "dependencies": {
