@@ -45,5 +45,8 @@ build
 # Babel build
 lib
 
+# nextjs build
+.next
+
 # Mac
 .DS_Store
