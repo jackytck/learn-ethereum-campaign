@@ -5,7 +5,7 @@ const Web3 = require('web3')
 const provider = ganache.provider()
 const web3 = new Web3(provider)
 
-const compiledFatory = require('../ethereum/build/CompaignFactory.json')
+const compiledFatory = require('../ethereum/build/CampaignFactory.json')
 const compiledCampaign = require('../ethereum/build/Campaign.json')
 
 let accounts
