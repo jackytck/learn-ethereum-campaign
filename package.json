@@ -7,7 +7,7 @@
     "compile": "node ethereum/compile.js",
     "deploy": "node ethereum/deploy.js",
     "test": "mocha",
-    "dev": "next dev"
+    "dev": "node server.js"
   },
   "dependencies": {
     "babel-plugin-inline-dotenv": "^1.1.2",
@@ -16,6 +16,7 @@
     "ganache-cli": "^6.0.3",
     "mocha": "^5.0.1",
     "next": "4.1.4",
+    "next-routes": "^1.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "semantic-ui-css": "^2.3.0",
