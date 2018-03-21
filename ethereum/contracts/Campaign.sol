@@ -9,7 +9,7 @@ contract CampaignFactory {
     }
 
     function getDeployedCampaigns() public view returns (address[]) {
-      return deployedCampaigns;
+        return deployedCampaigns;
     }
 }
 
@@ -72,12 +72,26 @@ contract Campaign {
     }
 
     function finalizeRequest(uint index) public restricted {
-      Request storage request = requests[index];
+        Request storage request = requests[index];
 
-      require(!request.complete);
-      require(request.approvalCount > approversCount / 2);
+        require(!request.complete);
+        require(request.approvalCount > approversCount / 2);
 
-      request.recipient.transfer(request.value);
-      request.complete = true;
+        request.recipient.transfer(request.value);
+        request.complete = true;
+    }
+
+    function getSummary () public view returns (uint, uint, uint, uint, address) {
+        return (
+            minimumContribution,
+            this.balance,
+            requests.length,
+            approversCount,
+            manager
+        );
+    }
+
+    function getRequestsCount () public view returns (uint) {
+        return requests.length;
     }
 }
