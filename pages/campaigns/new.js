@@ -55,7 +55,7 @@ class CampaignNew extends Component {
             />
           </Form.Field>
 
-          <Message error header='Oops!' content={this.state.errorMessage} />
+          <Message error header='Oops!' content={this.state.errorMessage} style={{ overflowWrap: 'break-word' }} />
           <Button type='submit' primary loading={this.state.loading} disabled={this.state.loading}>Create!</Button>
         </Form>
       </Layout>
